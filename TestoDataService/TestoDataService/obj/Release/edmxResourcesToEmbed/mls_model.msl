@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mls_dbModelStoreContainer" CdmEntityContainer="mls_dbEntities">
+    <EntitySetMapping Name="backup_agent">
+      <EntityTypeMapping TypeName="mls_dbModel.backup_agent">
+        <MappingFragment StoreEntitySet="backup_agent">
+          <ScalarProperty Name="backup_agent_id" ColumnName="backup_agent_id" />
+          <ScalarProperty Name="backup_agent_name" ColumnName="backup_agent_name" />
+          <ScalarProperty Name="server_count" ColumnName="server_count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_cost_center">
+      <EntityTypeMapping TypeName="mls_dbModel.client_cost_center">
+        <MappingFragment StoreEntitySet="client_cost_center">
+          <ScalarProperty Name="client_account_id" ColumnName="client_account_id" />
+          <ScalarProperty Name="client_account_name" ColumnName="client_account_name" />
+          <ScalarProperty Name="cost_center" ColumnName="cost_center" />
+          <ScalarProperty Name="device_count" ColumnName="device_count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="model_types_power">
+      <EntityTypeMapping TypeName="mls_dbModel.model_types_power">
+        <MappingFragment StoreEntitySet="model_types_power">
+          <ScalarProperty Name="model_type_id" ColumnName="model_type_id" />
+          <ScalarProperty Name="model_name" ColumnName="model_name" />
+          <ScalarProperty Name="device_count" ColumnName="device_count" />
+          <ScalarProperty Name="kw" ColumnName="kw" />
+          <ScalarProperty Name="platform" ColumnName="platform" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="monitoring_agent">
+      <EntityTypeMapping TypeName="mls_dbModel.monitoring_agent">
+        <MappingFragment StoreEntitySet="monitoring_agent">
+          <ScalarProperty Name="monitor_agent_id" ColumnName="monitor_agent_id" />
+          <ScalarProperty Name="monitor_agent_name" ColumnName="monitor_agent_name" />
+          <ScalarProperty Name="server_count" ColumnName="server_count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="os_types">
+      <EntityTypeMapping TypeName="mls_dbModel.os_types">
+        <MappingFragment StoreEntitySet="os_types">
+          <ScalarProperty Name="os_type_id" ColumnName="os_type_id" />
+          <ScalarProperty Name="os_name" ColumnName="os_name" />
+          <ScalarProperty Name="os_vendor" ColumnName="os_vendor" />
+          <ScalarProperty Name="os_type" ColumnName="os_type" />
+          <ScalarProperty Name="os_category" ColumnName="os_category" />
+          <ScalarProperty Name="server_count" ColumnName="server_count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="related_systems">
+      <EntityTypeMapping TypeName="mls_dbModel.related_systems">
+        <MappingFragment StoreEntitySet="related_systems">
+          <ScalarProperty Name="related_systems_id" ColumnName="related_systems_id" />
+          <ScalarProperty Name="system_category_name" ColumnName="system_category_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="server_categories">
+      <EntityTypeMapping TypeName="mls_dbModel.server_categories">
+        <MappingFragment StoreEntitySet="server_categories">
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="category_name" ColumnName="category_name" />
+          <ScalarProperty Name="server_count" ColumnName="server_count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="server_state">
+      <EntityTypeMapping TypeName="mls_dbModel.server_state">
+        <MappingFragment StoreEntitySet="server_state">
+          <ScalarProperty Name="server_state_id" ColumnName="server_state_id" />
+          <ScalarProperty Name="server_state_name" ColumnName="server_state_name" />
+          <ScalarProperty Name="server_count" ColumnName="server_count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="server_types">
+      <EntityTypeMapping TypeName="mls_dbModel.server_types">
+        <MappingFragment StoreEntitySet="server_types">
+          <ScalarProperty Name="server_type_id" ColumnName="server_type_id" />
+          <ScalarProperty Name="server_type_name" ColumnName="server_type_name" />
+          <ScalarProperty Name="server_count" ColumnName="server_count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="service_category">
+      <EntityTypeMapping TypeName="mls_dbModel.service_category">
+        <MappingFragment StoreEntitySet="service_category">
+          <ScalarProperty Name="service_category_id" ColumnName="service_category_id" />
+          <ScalarProperty Name="service_category_name" ColumnName="service_category_name" />
+          <ScalarProperty Name="server_count" ColumnName="server_count" />
+          <ScalarProperty Name="impact" ColumnName="impact" />
+          <ScalarProperty Name="urgency" ColumnName="urgency" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="site_location">
+      <EntityTypeMapping TypeName="mls_dbModel.site_location">
+        <MappingFragment StoreEntitySet="site_location">
+          <ScalarProperty Name="site_location_id" ColumnName="site_location_id" />
+          <ScalarProperty Name="site_location_name" ColumnName="site_location_name" />
+          <ScalarProperty Name="device_count" ColumnName="device_count" />
+          <ScalarProperty Name="total_measured" ColumnName="total_measured" />
+          <ScalarProperty Name="kwh_measured" ColumnName="kwh_measured" />
+          <ScalarProperty Name="google_map_address" ColumnName="google_map_address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="support_org">
+      <EntityTypeMapping TypeName="mls_dbModel.support_org">
+        <MappingFragment StoreEntitySet="support_org">
+          <ScalarProperty Name="support_org_id" ColumnName="support_org_id" />
+          <ScalarProperty Name="support_org_name" ColumnName="support_org_name" />
+          <ScalarProperty Name="support_teams" ColumnName="support_teams" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tko_msl_master">
+      <EntityTypeMapping TypeName="mls_dbModel.tko_msl_master">
+        <MappingFragment StoreEntitySet="tko_msl_master">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="customer" ColumnName="customer" />
+          <ScalarProperty Name="localname" ColumnName="localname" />
+          <ScalarProperty Name="serialnumber" ColumnName="serialnumber" />
+          <ScalarProperty Name="system_state" ColumnName="system_state" />
+          <ScalarProperty Name="server_type" ColumnName="server_type" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="service_category" ColumnName="service_category" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="domain" ColumnName="domain" />
+          <ScalarProperty Name="is_local_security" ColumnName="is_local_security" />
+          <ScalarProperty Name="security_waiver" ColumnName="security_waiver" />
+          <ScalarProperty Name="security_waiver_notes" ColumnName="security_waiver_notes" />
+          <ScalarProperty Name="os" ColumnName="os" />
+          <ScalarProperty Name="os_minor" ColumnName="os_minor" />
+          <ScalarProperty Name="os_patch_level" ColumnName="os_patch_level" />
+          <ScalarProperty Name="kernel_patch" ColumnName="kernel_patch" />
+          <ScalarProperty Name="patching_group" ColumnName="patching_group" />
+          <ScalarProperty Name="service_ip" ColumnName="service_ip" />
+          <ScalarProperty Name="service_fqdn" ColumnName="service_fqdn" />
+          <ScalarProperty Name="console_access" ColumnName="console_access" />
+          <ScalarProperty Name="cpu_cores" ColumnName="cpu_cores" />
+          <ScalarProperty Name="cpu_count" ColumnName="cpu_count" />
+          <ScalarProperty Name="cpu_model" ColumnName="cpu_model" />
+          <ScalarProperty Name="cpu_speed" ColumnName="cpu_speed" />
+          <ScalarProperty Name="local_disk_capacity" ColumnName="local_disk_capacity" />
+          <ScalarProperty Name="local_disk_slot_total" ColumnName="local_disk_slot_total" />
+          <ScalarProperty Name="local_disk_installed" ColumnName="local_disk_installed" />
+          <ScalarProperty Name="local_raid_level" ColumnName="local_raid_level" />
+          <ScalarProperty Name="physical_memory" ColumnName="physical_memory" />
+          <ScalarProperty Name="purchase_date" ColumnName="purchase_date" />
+          <ScalarProperty Name="sun_host_id" ColumnName="sun_host_id" />
+          <ScalarProperty Name="time_zone" ColumnName="time_zone" />
+          <ScalarProperty Name="street_address" ColumnName="street_address" />
+          <ScalarProperty Name="regulation_compliance" ColumnName="regulation_compliance" />
+          <ScalarProperty Name="in_cluster" ColumnName="in_cluster" />
+          <ScalarProperty Name="reboot_automatic" ColumnName="reboot_automatic" />
+          <ScalarProperty Name="reboot_notes" ColumnName="reboot_notes" />
+          <ScalarProperty Name="master_backup_server" ColumnName="master_backup_server" />
+          <ScalarProperty Name="backup_ip" ColumnName="backup_ip" />
+          <ScalarProperty Name="vm_platform" ColumnName="vm_platform" />
+          <ScalarProperty Name="vm_host" ColumnName="vm_host" />
+          <ScalarProperty Name="primary_application" ColumnName="primary_application" />
+          <ScalarProperty Name="backup_agent" ColumnName="backup_agent" />
+          <ScalarProperty Name="monitor_agent" ColumnName="monitor_agent" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="rack_shelf" ColumnName="rack_shelf" />
+          <ScalarProperty Name="dc_location" ColumnName="dc_location" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="use_state" ColumnName="use_state" />
+          <ScalarProperty Name="asset_tag" ColumnName="asset_tag" />
+          <ScalarProperty Name="warranty_end_date" ColumnName="warranty_end_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vm_platform">
+      <EntityTypeMapping TypeName="mls_dbModel.vm_platform">
+        <MappingFragment StoreEntitySet="vm_platform">
+          <ScalarProperty Name="vm_platform_id" ColumnName="vm_platform_id" />
+          <ScalarProperty Name="vm_platform_name" ColumnName="vm_platform_name" />
+          <ScalarProperty Name="server_count" ColumnName="server_count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

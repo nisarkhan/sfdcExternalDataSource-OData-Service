@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mls_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="backup_agent">
+    <Key>
+      <PropertyRef Name="backup_agent_id" />
+    </Key>
+    <Property Name="backup_agent_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="backup_agent_name" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="server_count" Type="int" />
+  </EntityType>
+  <EntityType Name="client_cost_center">
+    <Key>
+      <PropertyRef Name="client_account_id" />
+    </Key>
+    <Property Name="client_account_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="client_account_name" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="cost_center" Type="nvarchar" MaxLength="80" />
+    <Property Name="device_count" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="model_types_power">
+    <Key>
+      <PropertyRef Name="model_type_id" />
+    </Key>
+    <Property Name="model_type_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="model_name" Type="nvarchar" MaxLength="60" />
+    <Property Name="device_count" Type="nvarchar" MaxLength="5" />
+    <Property Name="kw" Type="nvarchar" MaxLength="5" />
+    <Property Name="platform" Type="nvarchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="monitoring_agent">
+    <Key>
+      <PropertyRef Name="monitor_agent_id" />
+    </Key>
+    <Property Name="monitor_agent_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="monitor_agent_name" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="server_count" Type="int" />
+  </EntityType>
+  <EntityType Name="os_types">
+    <Key>
+      <PropertyRef Name="os_type_id" />
+    </Key>
+    <Property Name="os_type_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="os_name" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="os_vendor" Type="nvarchar" MaxLength="80" />
+    <Property Name="os_type" Type="nvarchar" MaxLength="80" />
+    <Property Name="os_category" Type="nvarchar" MaxLength="80" />
+    <Property Name="server_count" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="related_systems">
+    <Key>
+      <PropertyRef Name="related_systems_id" />
+    </Key>
+    <Property Name="related_systems_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="system_category_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="server_categories">
+    <Key>
+      <PropertyRef Name="category_id" />
+    </Key>
+    <Property Name="category_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="category_name" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="server_count" Type="nvarchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="server_state">
+    <Key>
+      <PropertyRef Name="server_state_id" />
+    </Key>
+    <Property Name="server_state_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="server_state_name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="server_count" Type="int" />
+  </EntityType>
+  <EntityType Name="server_types">
+    <Key>
+      <PropertyRef Name="server_type_id" />
+    </Key>
+    <Property Name="server_type_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="server_type_name" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="server_count" Type="int" />
+  </EntityType>
+  <EntityType Name="service_category">
+    <Key>
+      <PropertyRef Name="service_category_id" />
+    </Key>
+    <Property Name="service_category_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="service_category_name" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="server_count" Type="int" />
+    <Property Name="impact" Type="nvarchar" MaxLength="60" />
+    <Property Name="urgency" Type="nvarchar" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="site_location">
+    <Key>
+      <PropertyRef Name="site_location_id" />
+    </Key>
+    <Property Name="site_location_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="site_location_name" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="device_count" Type="int" />
+    <Property Name="total_measured" Type="nvarchar" MaxLength="10" />
+    <Property Name="kwh_measured" Type="nvarchar" MaxLength="10" />
+    <Property Name="google_map_address" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="support_org">
+    <Key>
+      <PropertyRef Name="support_org_id" />
+    </Key>
+    <Property Name="support_org_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="support_org_name" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="support_teams" Type="int" />
+  </EntityType>
+  <EntityType Name="tko_msl_master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customer" Type="nvarchar" MaxLength="80" />
+    <Property Name="localname" Type="nvarchar" MaxLength="60" />
+    <Property Name="serialnumber" Type="nvarchar" MaxLength="128" />
+    <Property Name="system_state" Type="nvarchar" MaxLength="20" />
+    <Property Name="server_type" Type="nvarchar" MaxLength="30" />
+    <Property Name="category" Type="nvarchar" MaxLength="60" />
+    <Property Name="service_category" Type="nvarchar" MaxLength="60" />
+    <Property Name="country" Type="nvarchar" MaxLength="50" />
+    <Property Name="domain" Type="nvarchar" MaxLength="128" />
+    <Property Name="is_local_security" Type="nvarchar" MaxLength="10" />
+    <Property Name="security_waiver" Type="nvarchar" MaxLength="60" />
+    <Property Name="security_waiver_notes" Type="nvarchar" MaxLength="128" />
+    <Property Name="os" Type="nvarchar" MaxLength="80" />
+    <Property Name="os_minor" Type="nvarchar" MaxLength="60" />
+    <Property Name="os_patch_level" Type="nvarchar" MaxLength="160" />
+    <Property Name="kernel_patch" Type="nvarchar" MaxLength="100" />
+    <Property Name="patching_group" Type="nvarchar" MaxLength="60" />
+    <Property Name="service_ip" Type="nvarchar" MaxLength="60" />
+    <Property Name="service_fqdn" Type="nvarchar" MaxLength="128" />
+    <Property Name="console_access" Type="nvarchar" MaxLength="128" />
+    <Property Name="cpu_cores" Type="nvarchar" MaxLength="5" />
+    <Property Name="cpu_count" Type="nvarchar" MaxLength="5" />
+    <Property Name="cpu_model" Type="nvarchar" MaxLength="80" />
+    <Property Name="cpu_speed" Type="nvarchar" MaxLength="60" />
+    <Property Name="local_disk_capacity" Type="nvarchar" MaxLength="255" />
+    <Property Name="local_disk_slot_total" Type="nvarchar" MaxLength="5" />
+    <Property Name="local_disk_installed" Type="nvarchar" MaxLength="40" />
+    <Property Name="local_raid_level" Type="nvarchar" MaxLength="30" />
+    <Property Name="physical_memory" Type="nvarchar" MaxLength="20" />
+    <Property Name="purchase_date" Type="datetime" />
+    <Property Name="sun_host_id" Type="nvarchar" MaxLength="128" />
+    <Property Name="time_zone" Type="nvarchar" MaxLength="80" />
+    <Property Name="street_address" Type="nvarchar" MaxLength="200" />
+    <Property Name="regulation_compliance" Type="nvarchar" MaxLength="60" />
+    <Property Name="in_cluster" Type="nvarchar" MaxLength="10" />
+    <Property Name="reboot_automatic" Type="nvarchar" MaxLength="10" />
+    <Property Name="reboot_notes" Type="nvarchar" MaxLength="100" />
+    <Property Name="master_backup_server" Type="nvarchar" MaxLength="128" />
+    <Property Name="backup_ip" Type="nvarchar" MaxLength="15" />
+    <Property Name="vm_platform" Type="nvarchar" MaxLength="60" />
+    <Property Name="vm_host" Type="nvarchar" MaxLength="128" />
+    <Property Name="primary_application" Type="nvarchar" MaxLength="255" />
+    <Property Name="backup_agent" Type="nvarchar" MaxLength="60" />
+    <Property Name="monitor_agent" Type="nvarchar" MaxLength="60" />
+    <Property Name="location" Type="nvarchar" MaxLength="60" />
+    <Property Name="rack_shelf" Type="nvarchar" MaxLength="10" />
+    <Property Name="dc_location" Type="nvarchar" MaxLength="128" />
+    <Property Name="model" Type="nvarchar" MaxLength="60" />
+    <Property Name="use_state" Type="nvarchar" MaxLength="20" />
+    <Property Name="asset_tag" Type="nvarchar" MaxLength="30" />
+    <Property Name="warranty_end_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="vm_platform">
+    <Key>
+      <PropertyRef Name="vm_platform_id" />
+    </Key>
+    <Property Name="vm_platform_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vm_platform_name" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="server_count" Type="int" />
+  </EntityType>
+  <EntityContainer Name="mls_dbModelStoreContainer">
+    <EntitySet Name="backup_agent" EntityType="Self.backup_agent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_cost_center" EntityType="Self.client_cost_center" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="model_types_power" EntityType="Self.model_types_power" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="monitoring_agent" EntityType="Self.monitoring_agent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="os_types" EntityType="Self.os_types" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="related_systems" EntityType="Self.related_systems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="server_categories" EntityType="Self.server_categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="server_state" EntityType="Self.server_state" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="server_types" EntityType="Self.server_types" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="service_category" EntityType="Self.service_category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="site_location" EntityType="Self.site_location" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="support_org" EntityType="Self.support_org" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tko_msl_master" EntityType="Self.tko_msl_master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vm_platform" EntityType="Self.vm_platform" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
